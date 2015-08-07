@@ -6,6 +6,7 @@ g = 9.8 #m/s^2
 
 plt.rc('font', size=18)
 fig, ax = plt.subplots()
+fig.canvas.set_window_title("Wing Kit Lee's Sample Lecture (2015)")
 plt.subplots_adjust(left=0.2, bottom=0.4)
 t = np.arange(0.0, 10.0, 0.001)
 x0 = 5.0
@@ -29,7 +30,7 @@ axv0  = plt.axes([0.2, 0.1, 0.65, 0.03], axisbg=axcolor)
 
 slength = Slider(axlength, r'$l$ [m]', 0.1, 10.0, valinit=l0)
 sx0 = Slider(axx0, r'$\alpha$ [deg]', 0.1, 10.0, valinit=x0)
-sv0 = Slider(axv0, r'$\beta$ [deg/s]', 0.1, 100.0, valinit=v0)
+sv0 = Slider(axv0, r'$\beta$ [deg/s]', -50.0, 50.0, valinit=v0)
 
 def update(val):
     xx0 = sx0.val
